@@ -17,7 +17,7 @@ think of a project as a permanent home for your code. You'll be using
 a tool called "Leiningen" to help you create and manage your
 project. To create a new project, run this command:
 
-```clojure
+```sh
 lein new quil drawing
 ```
 
