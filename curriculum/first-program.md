@@ -212,7 +212,7 @@ Third, we set the color of the lines we will draw with `stroke`. The
 code 255 0 0 represents red. You can [look up RGB codes](http://xona.com/colorlist/) for other
 colors if you would like to try something else.
 
-In Light Table, in the lines.clj file, add the following after the
+In Nightcode, in the lines.clj file, add the following after the
 closing parenthesis of the setup function.
 
 ```clojure
@@ -254,8 +254,8 @@ title and size. You also tell it what are the names of the setup and
 draw functions. These have to match exactly the function names we used
 above.
 
-Now press `Ctrl + Shift + Enter` (or `Cmd + Shift + Enter`) to
-evaluate the file. Your drawing should appear.
+Now press "Reload" ( `Ctrl + Shift + s` or `Cmd + Shift + s`) to
+load the file. Your drawing should appear.
 
 ### Exercise: Rainbow lines
 Update your drawing so that:
