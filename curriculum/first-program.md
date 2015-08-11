@@ -17,7 +17,7 @@ think of a project as a permanent home for your code. You'll be using
 a tool called "Leiningen" to help you create and manage your
 project. To create a new project, run this command:
 
-```clojure
+```sh
 lein new quil drawing
 ```
 
@@ -44,21 +44,47 @@ skeleton:
   should get executed first?"
 - `src/drawing/core.clj` is where the Clojure code goes
 
-This uses a Clojure library, [Quil](https://github.com/quil/quil), that creates drawings called
+This uses a Clojure library, [Quil][], that creates drawings called
 sketches.
 
-Now let's go ahead and actually run the Quil sketch. Open up Light
-Table and do File - Open Folder - find the drawing folder and click
-Upload
+[Quil]: https://github.com/quil/quil
 
-Press `Ctrl + Shift + Enter` (or `Cmd + Shift + Enter`) to evaluate
-the file.
+Now let's go ahead and actually run the Quil sketch.
+
+Open up Nightcode, do "Import", find the drawing folder and click
+"Open".
+
+Start a REPL for your project by pressing "Run with REPL". Wait for
+the `user=>` prompt to appear in the bottom-right REPL window. It
+might take some time!
+
+In the files view on the left, expand "src" and "drawing", and click
+"core.clj".
+
+Now, press "Reload" (`Ctrl + Shift + s` or `Cmd + Shift + s`) to
+evaluate the whole file. A new window should appear with your sketch.
+
+To make changes to the drawing, use the "Eval" button. For example, to
+slow the circle down, change the `update-state` function to increase
+the circle's angle by only `0.05` instead of `0.1`. Your function
+should look like this:
+
+```clojure
+(defn update-state [state]
+  ; Update sketch state by changing circle color and position.
+  {:color (mod (+ (:color state) 0.7) 255)
+   :angle (+ (:angle state) 0.05)})
+```
+
+With the cursor still within the definition of `update-state`, press
+"Eval" (`Ctrl + Shift + x` or `Cmd + Shift + x`). The circle should
+instantly slow down!
 
 ## Modify Project
 
-Let's create another Quil sketch. In Light Table, do File - New
-File. Do File - Save File As - Enter lines.clj as the name - and
-select the directory - drawing/src/drawing - then click Save.
+Let's create another Quil sketch. In Nightcode, select the
+`src/drawing/` folder again. Then click "New File".  Enter "lines.clj"
+as the name, then click "OK".
 
 ## Organization
 
@@ -186,7 +212,7 @@ Third, we set the color of the lines we will draw with `stroke`. The
 code 255 0 0 represents red. You can [look up RGB codes](http://xona.com/colorlist/) for other
 colors if you would like to try something else.
 
-In Light Table, in the lines.clj file, add the following after the
+In Nightcode, in the lines.clj file, add the following after the
 closing parenthesis of the setup function.
 
 ```clojure
@@ -228,8 +254,8 @@ title and size. You also tell it what are the names of the setup and
 draw functions. These have to match exactly the function names we used
 above.
 
-Now press `Ctrl + Shift + Enter` (or `Cmd + Shift + Enter`) to
-evaluate the file. Your drawing should appear.
+Now press "Reload" ( `Ctrl + Shift + s` or `Cmd + Shift + s`) to
+load the file. Your drawing should appear.
 
 ### Exercise: Rainbow lines
 Update your drawing so that:
