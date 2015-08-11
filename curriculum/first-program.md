@@ -49,12 +49,34 @@ sketches.
 
 [Quil]: https://github.com/quil/quil
 
-Now let's go ahead and actually run the Quil sketch. Open up Light
-Table and do File - Open Folder - find the drawing folder and click
-Upload
+Now let's go ahead and actually run the Quil sketch.
 
-Press `Ctrl + Shift + Enter` (or `Cmd + Shift + Enter`) to evaluate
-the file.
+Open up Nightcode, do "Import", find the drawing folder and click
+"Open".
+
+In the files view on the left, expand "src" and "drawing", and click
+"core.clj".
+
+Start a REPL for your project by pressing "Run with REPL".
+
+Now, press "Reload" (`Ctrl + Shift + s` or `Cmd + Shift + s`) to
+evaluate the whole file. A new window should appear with your sketch.
+
+To make changes to the drawing, use the "Eval" button. For example, to
+slow the circle down, change the `update-state` function to increase
+the circle's angle by only `0.05` instead of `0.1`. Your function
+should look like this:
+
+```clojure
+(defn update-state [state]
+  ; Update sketch state by changing circle color and position.
+  {:color (mod (+ (:color state) 0.7) 255)
+   :angle (+ (:angle state) 0.05)})
+```
+
+With the cursor still within the definition of `update-state`, press
+"Eval" (`Ctrl + Shift + x` or `Cmd + Shift + x`). The circle should
+instantly slow down!
 
 ## Modify Project
 
