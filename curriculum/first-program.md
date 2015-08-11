@@ -44,8 +44,10 @@ skeleton:
   should get executed first?"
 - `src/drawing/core.clj` is where the Clojure code goes
 
-This uses a Clojure library, [Quil](https://github.com/quil/quil), that creates drawings called
+This uses a Clojure library, [Quil][], that creates drawings called
 sketches.
+
+[Quil]: https://github.com/quil/quil
 
 Now let's go ahead and actually run the Quil sketch. Open up Light
 Table and do File - Open Folder - find the drawing folder and click
