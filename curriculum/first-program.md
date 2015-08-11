@@ -54,10 +54,12 @@ Now let's go ahead and actually run the Quil sketch.
 Open up Nightcode, do "Import", find the drawing folder and click
 "Open".
 
+Start a REPL for your project by pressing "Run with REPL". Wait for
+the `user=>` prompt to appear in the bottom-right REPL window. It
+might take some time!
+
 In the files view on the left, expand "src" and "drawing", and click
 "core.clj".
-
-Start a REPL for your project by pressing "Run with REPL".
 
 Now, press "Reload" (`Ctrl + Shift + s` or `Cmd + Shift + s`) to
 evaluate the whole file. A new window should appear with your sketch.
