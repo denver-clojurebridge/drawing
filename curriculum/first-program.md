@@ -82,9 +82,9 @@ instantly slow down!
 
 ## Modify Project
 
-Let's create another Quil sketch. In Light Table, do File - New
-File. Do File - Save File As - Enter lines.clj as the name - and
-select the directory - drawing/src/drawing - then click Save.
+Let's create another Quil sketch. In Nightcode, select the
+`src/drawing/` folder again. Then click "New File".  Enter "lines.clj"
+as the name, then click "OK".
 
 ## Organization
 
